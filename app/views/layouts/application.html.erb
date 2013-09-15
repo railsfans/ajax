@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ajax</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=04f5c49c2d2df9a69f834ccbe886a8ca"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+ <%= link_to 'ajax', boys_ajax_path(:format=>:js), :remote=>true %>
+<div id='ajax' style='width:300px;height:300px;border:1px solid gray'></div>
+</body>
+</html>
